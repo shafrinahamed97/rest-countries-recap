@@ -8,16 +8,16 @@ const displayCountries = countries => {
   const countriesHTML = countries.map(country => getCountryHTML(country));
   // console.log(countriesHTML);
   const container = document.getElementById('countries');
-  container.innerHTML = countriesHTML;
+  container.innerHTML = countriesHTML.join(' ');
 }
 
 const getCountryHTML = country => {
   return `
   
 <div class= "country">
-<h2>
-${country.name.common}
-</h2>
+
+<h2>${country.name.common}</h2>
+
 <img src="${country.flags.png}">
 </div>
 
